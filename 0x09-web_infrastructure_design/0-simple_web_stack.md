@@ -1,0 +1,40 @@
+https://miro.com/app/board/uXjVNo2sWeg=/?share_link_id=137379459159
+https://github.com/Dominicksam/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/0-simple_web_stack.jpg
+Description
+This is a simple web infrastructure that hosts a website that is reachable via www.foobar.com. There are no firewalls or SSL certificates for protecting the server's network. Each component (database, application server) has to share the resources (CPU, RAM, and SSD) provided by the server.
+
+Specifics About This Infrastructure
+What is a server .
+A server is a computer system or software program that provides functionality or resources to other computers, known as clients, over a network. It can refer to both the physical hardware and the software running on it.
+In the context of web hosting, a server typically refers to a physical or virtual machine that hosts websites, applications, or other online services.
+
+The role of the domain name.
+The role of a domain name is to serve as a unique identifier for a website or online service. It allows users to access the website by typing the domain name into a web browser instead of remembering the website's IP address.
+
+The type of DNS record www is in www.foobar.com.
+www.foobar.com uses an A record. This can be checked by running dig www.foobar.com.
+Note: the results might be different but for the infrastructure in this design, an A record is used.
+Address Mapping record (A Record)—also known as a DNS host record, stores a hostname and its corresponding IPv4 address.
+
+The role of the web server.
+The web server is responsible for handling HTTP requests from clients (such as web browsers) and serving web pages, files, or other resources in response to those requests.
+It manages the communication between the client and the server-side application, processes requests, executes server-side scripts (if applicable), and returns the appropriate response to the client.
+
+The role of the application server.
+To install, operate and host applications and associated services for end users, IT services and organizations and facilitates the hosting and delivery of high-end consumer or business applications
+
+The role of the database.
+To maintain a collection of organized information that can easily be accessed, managed and updated
+
+What the server uses to communicate with the client (computer of the user requesting the website).
+Communication between the client and the server occurs over the internet network through the TCP/IP protocol suite.
+
+Issues With This Infrastructure
+There are multiple SPOF (Single Point Of Failure) in this infrastructure.
+For example, if the MySQL database server is down, the entire site would be down.
+
+For maintenance, Downtime needed.
+When we need to run some maintenance checks on any component, they have to be put down or the server has to be turned off. Since there's only one server, the website would be experiencing a downtime.
+
+Cannot scale if there's too much incoming traffic.
+It would be hard to scale this infrastructure becauses one server contains the required components. The server can quickly run out of resources or slow down when it starts receiving a lot of requests.

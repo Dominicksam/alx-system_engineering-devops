@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ssh-keygen -t rsa -b 4096 -C school -f school -N betty
+
+echo "RSA key pair generated successfully."
+echo "Private key saved as: school" 
+echo "Public key saved as: school.pub"
+
